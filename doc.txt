@@ -1,0 +1,134 @@
+
+predict Violation Pattern (Tuple + Dictionary) Use the violation data to predict patterns. 
+Create a function predict_violation_pattern(violations) that looks for recurring violations for a particular vehicle, 
+such as a vehicle repeatedly violating speed limits at a specific time of day (you can mock time with integers representing 
+time blocks like 0-6 for morning, 7-12 for noon, etc.). 
+Input: List of tuples (vehicle_id, speed, violation_type, time_block) 
+Output: Dictionary showing the recurring violation pattern for each vehicle.
+
+You have a list of vehicle numbers:
+vehicles = ["KA01AB1234", "KA02CD5678", "KA03EF9999", "KA01AB4321"]
+Task: Use a loop to extract just the first 4 characters from each and print them.
+
+Remove Duplicates with Loops Only
+Given a list of violating vehicles (some appear multiple times):
+violators = ["KA01AB1234", "KA02CD5678", "KA01AB1234", "KA03EF9999"]
+Task: Create a new list of unique vehicle numbers 
+
+Validate Vehicle Plate Format + Region
+vehicle = "KA01AB1234"
+Check if length is 10
+AND starts with "KA"
+If both true then "Valid Karnataka Plate"
+If length not 10 then  "Invalid Format"
+If not starting with KA then "Out of State Plate"
+
+Write a Python program to categorize vehicle speed violations into three levels — Minor, 
+Major, and Severe — based on the given speed values.
+Conditions:
+If the speed is between 81 and 100 km/h, it is a Minor violation.
+If the speed is between 101 and 119 km/h, it is a Major violation.
+If the speed is exactly 120 km/h, it is a Severe violation.
+The program should:
+Take a list of vehicle speeds.
+Use a loop to check each speed and print its violation category.
+Count and display the total number of Minor, Major, and Severe violations at the end.
+
+Introduction of computer vision model:
+What is meant by computer vision model?
+A Computer Vision Model is an AI system trained to analyze, process,
+and make sense of visual input (like images or video frames) to perform specific tasks such as:
+Object detection
+Image classification
+Facial recognition
+Image segmentation
+Motion tracking
+how can help it in smart traffic violation detection pattrens?
+It’s an AI-based surveillance system that uses computer vision (and sometimes IoT sensors) to automatically detect, 
+record, and analyze traffic rule violations such as:
+Speeding
+Signal jumping
+Wrong-way driving
+No helmet / seatbelt violations
+Illegal parking
+Lane discipline violations
+Example Architecture:
++--------------------+
+|  CCTV / Traffic Cam|
++---------+----------+
+          |
+          v
++-----------------------+
+|  Computer Vision Model|
+|  (YOLO / OpenCV / CNN)|
++-----------------------+
+          |
+          v
++---------------------------+
+|  Data Extraction & Storage|
+| (Vehicle ID, Speed, Time) |
++---------------------------+
+          |
+          v
++---------------------------+
+|  Analytics & Pattern Model|
+| (Python Dictionaries/Tuples)|
++---------------------------+
+          |
+          v
++---------------------------+
+|  Dashboard & Alerts       |
+| (For Police/Smart City)   |
++---------------------------+
+
+15-10-2025:
+Your task is to:
+Detect which vehicles violated the speed limit
+Count how many times each vehicle has violated the limit
+Identify the vehicle with the highest number of violations
+Given inputs:
+A speed limit of 60 km/h
+A list of traffic violation records 
+Each record contains:
+(vehicle_id, speed, zone, time)
+Your Tasks:
+Loop through the data and check if the vehicle's speed exceeds the speed limit.
+Print a message for each detected violation in the following format:
+"Violation Detected: <vehicle_id> in <zone> at <speed> km/h"
+Use a dictionary to keep track of the number of violations per vehicle.
+After processing all records, print a summary showing how many times each vehicle violated the speed limit.
+Finally, identify and print the vehicle with the most violations.
+
+Introduction of Apache pySpark:
+Apache PySpark is the Python API for Apache Spark,an open-source distributed computing system that provides 
+an interface for programming entire clusters with implicit data parallelism and fault tolerance. 
+PySpark allows you to leverage the power of Spark using Python, making it easier to work with large datasets 
+and perform complex data processing tasks.
+PySpark is the Python API for Apache Spark, allowing you to write Spark applications using Python.
+Apache Spark is a distributed big data processing framework for fast analytics.
+PySpark bridges Python’s simplicity with Spark’s speed and scalability.
+Milestone 1: Weeks 1–2
+Module: Spark Environment & Data Ingestion
+Objective: Set up PySpark locally, generate simulated traffic data, and perform initial ingestion and preprocessing.
+Tasks:
+• Week 1:
+ • Set up Apache Spark with PySpark in a local environment
+ • Define schema for traffic violation data including:
+  - Violation ID
+  - Timestamp
+  - Location (Intersection ID or Lat/Long)
+  - Violation Type (e.g., Speeding, Red Light)
+  - Vehicle Type
+  - Severity
+ • Simulate realistic datasets with intentional inconsistencies (missing values, malformed timestamps)
+ • Develop scripts to read CSV/JSON data into Spark DataFrames
+• Week 2:
+ • Clean and preprocess data:
+  - Handle missing or null values
+  - Standardize timestamps and categorical fields
+  - Validate violation types against expected list
+ • Save cleaned data into Parquet format for fast querying
+Output:
+• Working PySpark environment
+• Simulated traffic violation dataset
+• Ingestion and cleaning pipeline with cleaned data in Parquet format
