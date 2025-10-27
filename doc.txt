@@ -1,4 +1,3 @@
-
 predict Violation Pattern (Tuple + Dictionary) Use the violation data to predict patterns. 
 Create a function predict_violation_pattern(violations) that looks for recurring violations for a particular vehicle, 
 such as a vehicle repeatedly violating speed limits at a specific time of day (you can mock time with integers representing 
@@ -81,7 +80,6 @@ Example Architecture:
 | (For Police/Smart City)   |
 +---------------------------+
 
-15-10-2025:
 Your task is to:
 Detect which vehicles violated the speed limit
 Count how many times each vehicle has violated the limit
