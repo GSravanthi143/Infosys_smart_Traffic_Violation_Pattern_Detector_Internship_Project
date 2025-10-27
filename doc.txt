@@ -108,7 +108,17 @@ PySpark bridges Python’s simplicity with Spark’s speed and scalability.
 Milestone 1: Weeks 1–2
 Module: Spark Environment & Data Ingestion
 Objective: Set up PySpark locally, generate simulated traffic data, and perform initial ingestion and preprocessing.
-Tasks:
+
+Task Completion Dates:
+batch3	
+start date      	22-Sep
+	                       completion date
+milestone 1	       06-Oct
+milestone 2	       20-Oct
+milestone 3	       03-Nov
+milestone 4	       17-Nov
+
+Milestone 1:
 • Week 1:
  • Set up Apache Spark with PySpark in a local environment
  • Define schema for traffic violation data including:
@@ -130,3 +140,24 @@ Output:
 • Working PySpark environment
 • Simulated traffic violation dataset
 • Ingestion and cleaning pipeline with cleaned data in Parquet format
+
+Milestone 2: Weeks 3–4
+Module: Core Pattern Detection & Aggregation
+Objective: Analyse violation patterns across time and offense types through PySpark aggregations.
+Tasks:
+• Week 3:
+ • Derive time-based features: hour, day of week, month, year
+ • Aggregate total violations:
+  - Per hour of day
+  - Per day of week
+  - By type of offense
+  - Cross-tab: Violation type × Hour of day
+• Week 4:
+ • Aggregate by location to find:
+  - Total violations per Location ID
+  - Top N locations with highest violation counts
+ • Store results as Parquet tables for efficient access in later stages
+Output:
+• PySpark aggregation jobs for time- and type-based insights
+• Preliminary location-based analysis
+• Structured, optimized output datasets
